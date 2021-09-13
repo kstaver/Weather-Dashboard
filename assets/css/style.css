@@ -17,15 +17,11 @@ header {
 .city-search-forecast-container{
     display: flex;
     flex-wrap: wrap;
-   justify-content: space-between;
+    justify-content: space-between;
 }
 
 .city-form-container{
     margin-bottom: 10px;
-}
-
-.bold{
-    font-weight: bold;
 }
 
 #city-name {
@@ -47,9 +43,8 @@ outline: none !important;
   flex-grow: 1;
   margin-right: 5px;
   margin-bottom: 5px;
-
 }
-    
+
 .btn {
     flex-grow: 2;
     font-size: 1.5em;
