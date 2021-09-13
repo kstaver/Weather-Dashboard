@@ -10,7 +10,8 @@ dynFormContainer.classList = "city-search-forecast-container";
 leftColumnEL.appendChild(dynFormContainer)
 
 let formH3 = document.createElement("h3");
-formH3.textContent = " Search for a City ";
+formH3.textContent = "Search for a City";
+formH3.style.fontWeight = 'bold';
 dynFormContainer.appendChild(formH3);
 
 let formInput = document.createElement("input");
