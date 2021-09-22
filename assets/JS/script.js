@@ -1,4 +1,4 @@
-let leftColumnEL = document.querySelector("#left-column")
+let leftColumnEL = document.querySelector("#left-column");
 
 let citiesListContainerBtnEl = document.querySelector(".list-group-item");
 
@@ -53,7 +53,7 @@ var populateSavedCities = function() {
 
             let cityNameEl = document.createElement("a")
             let splitCityText = "";
-            cityNameEl.setAttribute("href", "#")
+            cityNameEl.setAttribute("href", "#");
             cityNameEl.setAttribute("data-city", citiesLocalStorage[i]);
             cityNameEl.setAttribute("id", citiesLocalStorage[i]);
             cityNameEl.setAttribute("role", "button");
@@ -90,7 +90,7 @@ function fetchSecondCall(searchByCity, latNum, lonNum, unixTimeCurrentDay, curre
                 
         populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, currentTempImperial, currentHumidity, currentMPS, mphWindSpeed, uvIndex);
         
-        populate5DayForecast(secondCallData)
+        populate5DayForecast(secondCallData);
     });
 };
 
@@ -209,10 +209,12 @@ var getWeatherData = function(event , cityClicked) {
     };
 
     if (searchByCity == "") {
-        alert("Please do not leave city name blank");
+        
+        alert("Please do not leave city name blank.");
         searchByCityEl.value = "";
         return 
     } else {  
+        
         searchByCityEl.value = "";
     };
          
@@ -221,39 +223,42 @@ var getWeatherData = function(event , cityClicked) {
     let cityExist = 0;
 
     if (citiesLocalStorage === null) {
+        
         citiesSearched =  new Array();
         
     } else { 
+        
         citiesSearched = citiesLocalStorage;
     };
  
     let openWeatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + searchByCity + "&appid=32a27c42260b02de3ba5e1466def4861&units=imperial";
 
-    fetch(  
-      openWeatherApiUrl
-    ).then(function (weatherResponse) {
+    fetch(openWeatherApiUrl).then(function (weatherResponse) {
         
         if(weatherResponse.ok) { 
-        return weatherResponse.json();
+            
+            return weatherResponse.json();
         } else {
             
             window.alert("Error: " + weatherResponse.statusText + "\nPlease re-enter a valid city");
             
             searchByCityEl.value = "";
+            
             return;
         }
     }).then(function (weatherLatLon) {
         
         let latNum = weatherLatLon.coord.lat;
         let lonNum = weatherLatLon.coord.lon;
-        let unixTimeCurrentDay = weatherLatLon.dt
-        let currentDayIcon = weatherLatLon.weather[0].icon 
-        let currentTempImperial = weatherLatLon.main.temp 
-        let currentHumidity = weatherLatLon.main.humidity 
-        let currentMPS = weatherLatLon.wind.speed
-        let mphWindSpeed = Math.round(currentMPS * 2.237) 
-        
+        let unixTimeCurrentDay = weatherLatLon.dt;
+        let currentDayIcon = weatherLatLon.weather[0].icon;
+        let currentTempImperial = weatherLatLon.main.temp;
+        let currentHumidity = weatherLatLon.main.humidity;
+        let currentMPS = weatherLatLon.wind.speed;
+        let mphWindSpeed = Math.round(currentMPS * 2.237);
+    
         for (i=0; i < citiesSearched.length; i++) {
+
             if (searchByCity.toLowerCase() === citiesSearched[i].toLowerCase()) {
                 
                 cityExist =1
@@ -281,7 +286,8 @@ seachEventHanglerEl.addEventListener("submit",getWeatherData);
 
 var cityClicked = function (event) {
      
-    let cityClicked = event.target.getAttribute("data-city")
+    let cityClicked = event.target.getAttribute("data-city");
+
     if (cityClicked){
         getWeatherData(event, cityClicked);
     } else {
@@ -289,6 +295,6 @@ var cityClicked = function (event) {
     };
 };
 
-citiesContainerEl.addEventListener("click", cityClicked)
+citiesContainerEl.addEventListener("click", cityClicked);
 
 populateSavedCities();

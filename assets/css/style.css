@@ -1,36 +1,38 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    color: whitesmoke;
-    background-image: linear-gradient(to right, rgb(51, 94, 181), rgb(32, 9, 76));
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  background-image: linear-gradient(to right, rgb(51, 94, 181), rgb(32, 9, 76));
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .city-search-forecast-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
 .city-form-container{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
+/*Font for the search box*/
 #city-name {
-    height:35px;
+  height:35px;
 }
 
 input:focus, textarea:focus, select:focus {
-outline-offset: 0px !important;
-outline: none !important;
+  outline-offset: 0px !important;
+  outline: none !important;
 }
 
 #city-name input:focus {
@@ -46,15 +48,15 @@ outline: none !important;
 }
 
 .btn {
-    flex-grow: 2;
-    font-size: 1.5em;
-    text-decoration:none;
-    border: none;
-    outline: none;
-    background-color: dodgerblue;
-    color: white;
-    margin-bottom: 6px;
-  }
+  flex-grow: 2;
+  font-size: 1.5em;
+  text-decoration:none;
+  border: none;
+  outline: none;
+  background-color: dodgerblue;
+  color: white;
+  margin-bottom: 6px;
+}
 
 .fa-search:hover{
   color: #FFD700;
@@ -96,7 +98,7 @@ outline: none !important;
 }
   
 .forcast-padding {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 /* This will be applied on any screen smaller than 768px */
@@ -112,18 +114,18 @@ outline: none !important;
 
   h3 {
     font-size: 20px;
+    font-weight: bold;
   }
 
   .form-input {
     flex-grow: 1;
-
   }
 
   .btn {
     margin-top: 5px;
     margin-bottom: 1;
     flex-grow: 1;
-    }
+  }
 }
 
 /* This will be applied on any screen smaller than 768px */
@@ -131,6 +133,7 @@ outline: none !important;
 
   h3 {
     font-size: 20px;
+    font-weight: bold;
   }
 }
 
@@ -139,6 +142,7 @@ outline: none !important;
 
   h3 {
     font-size: 21px;
+    font-weight: bold;
   }
 
   img {
@@ -150,9 +154,9 @@ outline: none !important;
   }
 
   .btn {
-  margin-top: 5px;
-  margin-bottom: 1;
-  flex-grow: 1;
+    margin-top: 5px;
+    margin-bottom: 1;
+    flex-grow: 1;
   }
 
   .weekly-flex-conatiner{
