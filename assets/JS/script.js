@@ -107,7 +107,7 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
    
     let currentIconSymbol = "http://openweathermap.org/img/wn/" + currentDayIcon + "@2x.png";
     currentIconEl.innerHTML = "<img src=" + currentIconSymbol + "></img>";
-    currentDayTitle.append(currentIconEl)
+    currentDayTitle.append(currentIconEl);
     
     let currentTempEl = document.createElement("p");
     let currentHumidityEl = document.createElement("p");
@@ -118,6 +118,21 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
     currentUvIEl.textContent = "UV Index: " + uvIndex;
+
+    /*
+    if (currentUvIEl <= 2){
+        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-green");
+    }else if(currentUvIEl >= 3 && currentUvIEl <=5) {
+        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-yellow");
+    }else if (currentUvIEl >=6 && currentUvIEl <= 7){
+        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-orange");
+    }else if (currentUvIEl >= 8 && currentUvIEl <= 10){
+        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-red");
+    }else{
+        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-purple");
+    } */
+    
+    //currentUvIEl.textContent = "UV Index: " + uvIndex;
 
     $("#daily-forecast-container").remove(); 
     
@@ -164,6 +179,7 @@ function populate5DayForecast(secondCallData) {
         var iconWeather = secondCallData.daily[i].weather[0].icon 
         let fahrenheitTemp = secondCallData.daily[i].temp.day 
         let humidity = secondCallData.daily[i].humidity;
+        let windSpeed = secondCallData.daily[i].wind;
         
         let eachDayContainer = document.createElement("div");
         eachDayContainer.setAttribute("id", ("day=" + [i]));
@@ -183,10 +199,12 @@ function populate5DayForecast(secondCallData) {
         
         let currentTempEl = document.createElement("p");
         let currentHumidityEl = document.createElement("p");
+        let currentWinSpEl = document.createElement("p");
         
         currentTempEl.textContent = "Temperature: " +  (fahrenheitTemp.toFixed(2)) + " °F";
         currentHumidityEl.textContent = "Humidity: " + humidity + "%";
-          
+        currentWinSpEl.textContent = "Wind Speed: " + windSpeed+ "mps";
+           
         eachDayContainer.appendChild(currentDayTitle);
         eachDayContainer.appendChild(currentIconEl);
         eachDayContainer.appendChild(currentTempEl);
@@ -298,3 +316,5 @@ var cityClicked = function (event) {
 citiesContainerEl.addEventListener("click", cityClicked);
 
 populateSavedCities();
+
+

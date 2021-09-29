@@ -93,7 +93,7 @@ input:focus, textarea:focus, select:focus {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 18px;  
+  margin-bottom: 18px;
   border:groove rgba(102, 102, 153, 0.2);
 }
   
@@ -114,7 +114,6 @@ input:focus, textarea:focus, select:focus {
 
   h3 {
     font-size: 20px;
-    font-weight: bold;
   }
 
   .form-input {
@@ -133,7 +132,6 @@ input:focus, textarea:focus, select:focus {
 
   h3 {
     font-size: 20px;
-    font-weight: bold;
   }
 }
 
@@ -142,7 +140,6 @@ input:focus, textarea:focus, select:focus {
 
   h3 {
     font-size: 21px;
-    font-weight: bold;
   }
 
   img {
