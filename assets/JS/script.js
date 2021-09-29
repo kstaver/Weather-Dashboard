@@ -119,7 +119,6 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
     currentUvIEl.textContent = "UV Index: " + uvIndex;
 
-    /*
     if (currentUvIEl <= 2){
         currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-green");
     }else if(currentUvIEl >= 3 && currentUvIEl <=5) {
@@ -130,7 +129,7 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
         currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-red");
     }else{
         currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-purple");
-    } */
+    }
     
     //currentUvIEl.textContent = "UV Index: " + uvIndex;
 
