@@ -117,21 +117,20 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentTempEl.textContent = "Temperature: " + (currentTempImperial.toFixed(1)) + " °F";
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
-    currentUvIEl.textContent = "UV Index: " + uvIndex;
-
-    if (currentUvIEl <= 2){
-        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-green");
-    }else if(currentUvIEl >= 3 && currentUvIEl <=5) {
-        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-yellow");
-    }else if (currentUvIEl >=6 && currentUvIEl <= 7){
-        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-orange");
-    }else if (currentUvIEl >= 8 && currentUvIEl <= 10){
-        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-red");
+   
+    if(uvIndex < 2){
+        uvIndex.addClass("low");  
+    }else if(uvIndex > 2 && uvIndex <= 5){
+        uvIndex.addClass("medium");
+    }else if(uvIndex > 5 && uvIndex <= 7){
+        uvIndex.addClass("high");
+    }else if(uvIndex > 7 && uvIndex <= 10){
+        uvIndex.addClass("very-high");   
     }else{
-        currentUvIEl.textContent = "UV Index: " + uvIndex.addClass(".bg-purple");
+        uvIndex.addClass("extremely-high");
     }
-    
-    //currentUvIEl.textContent = "UV Index: " + uvIndex;
+
+    currentUvIEl.textContent = "UV Index: " + uvIndex;
 
     $("#daily-forecast-container").remove(); 
     
