@@ -117,18 +117,6 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentTempEl.textContent = "Temperature: " + (currentTempImperial.toFixed(1)) + " °F";
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
-   
-    if(uvIndex < 2){
-        uvIndex.addClass("low");  
-    }else if(uvIndex > 2 && uvIndex <= 5){
-        uvIndex.addClass("medium");
-    }else if(uvIndex > 5 && uvIndex <= 7){
-        uvIndex.addClass("high");
-    }else if(uvIndex > 7 && uvIndex <= 10){
-        uvIndex.addClass("very-high");   
-    }else{
-        uvIndex.addClass("extremely-high");
-    }
 
     currentUvIEl.textContent = "UV Index: " + uvIndex;
 
