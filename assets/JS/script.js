@@ -141,12 +141,11 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
-    
     var uvBadge = "";
 
-    if (uvIndex < 3 ) {
+    if (uvIndex.value < 3 ) {
         uvBadge = "low"
-    } else if (uvIndex < 6 ) {
+    } else if (uvIndex.value < 6 ) {
         uvBadge = "medium"
     } else {
         uvBadge = "high"
