@@ -16,7 +16,7 @@ The Weather Dashboard website is a useful tool for searching for both the curren
 - [Contact Info](#contact-info)
 
 ## Installation
-No installation required! Just visit the [website](https://github.com/kstaver/Weather-Dashboard) and lookup the weather information for any city.
+No installation required! Just visit the [website](https://kstaver.github.io/Weather-Dashboard/) and lookup the weather information for any city.
 
 ## Usage
 Use this website to lookup the current and 5 day forecast of any city in the world. Simply enter the city's name into the search bar and click on the search button.
