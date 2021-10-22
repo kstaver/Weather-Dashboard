@@ -142,16 +142,16 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
     
-    var uvBadge = ""
+    var uvBadge = "";
 
     if (uvIndex < 3 ) {
-        uvBadge = "badge-success"
+        uvBadge = "low"
     } else if (uvIndex < 6 ) {
-        uvBadge = "badge-warning"
+        uvBadge = "medium"
     } else {
-        uvBadge = "badge-danger"
-    }
-    
+        uvBadge = "high"
+    };
+
     currentUvIEl.textContent = "UV Index: " + uvIndex
     currentUvIEl.classList = "uvBadge";
 
