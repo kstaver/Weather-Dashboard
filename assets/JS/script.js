@@ -152,7 +152,7 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
     currentUvIEl.textContent = "UV Index: " + uvIndex
-    urrentUvIEl.classList = "uvBadge";
+    currentUvIEl.classList = "uvBadge";
 
     $("#daily-forecast-container").remove(); 
     
