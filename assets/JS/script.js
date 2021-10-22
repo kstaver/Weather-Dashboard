@@ -101,16 +101,6 @@ function fetchSecondCall(searchByCity, latNum, lonNum, unixTimeCurrentDay, curre
     .then(function (secondCallData) {
         
         let uvIndex = secondCallData.current.uvi;
-
-        var uvBadge = ""
-
-        if (uvIndex < 3 ) {
-            uvBadge = "badge-success"
-        } else if (uvIndex < 6 ) {
-            uvBadge = "badge-warning"
-        } else {
-            uvBadge = "badge-danger"
-        }
         
         let unix_timestamp = unixTimeCurrentDay;
         
@@ -151,6 +141,17 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
+    
+    var uvBadge = ""
+
+    if (uvIndex < 3 ) {
+        uvBadge = "badge-success"
+    } else if (uvIndex < 6 ) {
+        uvBadge = "badge-warning"
+    } else {
+        uvBadge = "badge-danger"
+    }
+    
     currentUvIEl.textContent = "UV Index: " + uvIndex
     currentUvIEl.classList = "uvBadge";
 
