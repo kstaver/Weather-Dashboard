@@ -65,29 +65,6 @@ var populateSavedCities = function() {
     };
 };
 
-// function uvIndexColor(){
-
-// var uvBadge = ""
-//     if (data.current.uvi < 3 ) {
-//         uvBadge = "badge-success"
-//     } else if (data.current.uvi < 6 ) {
-//         uvBadge = "badge-warning"
-//     } else {
-//         uvBadge = "badge-danger"
-//     }
-//     if(uvI < 3){
-
-//     }else if(uvI >= 3 && uvI < 6){
-
-//     }else if(uvI >= 6 && uvI < 8){
-
-//     }else if(uvI >= 8 && uvI < 11){
-
-//     }else{
-
-//     }
-//};
-
 function fetchSecondCall(searchByCity, latNum, lonNum, unixTimeCurrentDay, currentDayIcon, currentTempImperial, currentHumidity, currentMPS, mphWindSpeed) {
 
     let openWeatherApiFiveDayUrl =  "https://api.openweathermap.org/data/2.5/onecall?lat=" + latNum + "&lon=" + lonNum + "&appid=32a27c42260b02de3ba5e1466def4861&units=imperial";
@@ -141,19 +118,19 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
-   // var uvBadge = "";
+    if(uvIndex < 3 ) {
+        currentUvIEl.className = "low";
+    }else if (uvIndex < 6 ) {
+        currentUvIEl.className = "medium";
+    }else if(uvIndex < 8){
+        currentUvIEl.className = "high";
+    }else if(uvIndex < 10){
+        currentUvIEl.className = "very-high";
+    }else{
+        currentUvIEl.className = "extremely-high";
+    }
 
-    if (uvIndex.value < 3 ) {
-        uvBadge = "low"
-    } else if (uvIndex.value < 6 ) {
-        uvBadge = "medium"
-    } else {
-        uvBadge = "high"
-    };
-
-    uvIndex.style.backgroundColor = 'green';
     currentUvIEl.textContent = "UV Index: " + uvIndex;
-   //currentUvIEl.classList = "uvBadge";
 
     $("#daily-forecast-container").remove(); 
     
