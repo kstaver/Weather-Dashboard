@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
-
+The Weather Dashboard website is a useful tool for searching for both the current and 5 day forecast of any city.
 
 ## Table of Contents
 - [Description](#description)
@@ -16,22 +16,23 @@
 - [Contact Info](#contact-info)
 
 ## Installation
-
+No installation required! Just visit the [website](https://github.com/kstaver/Weather-Dashboard) and lookup the weather information for any city.
 
 ## Usage
+Use this website to lookup the current and 5 day forecast of any city in the world. Simply enter the city's name into the search bar and click on the search button.
 
+![Weather Dashboard]()
 
 ## License
-This project is covered under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0);
+This project is covered under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Contribution
 You can contribute by contacting me and discussing what it is you would like to add onto this website.
 
 ## Testing
-
+Try putting in complicated city names. Try enterting the names of states or countries.
 
 ## Questions
-You can find the link to my website [here](https://github.com/kstaver/Weather-Dashboard).
 If you have any questions pertaining to my Weather Dashboard website, feel free to contact me.
 
 ## Contact Info
