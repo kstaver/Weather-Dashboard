@@ -21,7 +21,7 @@ No installation required! Just visit the [website](https://github.com/kstaver/We
 ## Usage
 Use this website to lookup the current and 5 day forecast of any city in the world. Simply enter the city's name into the search bar and click on the search button.
 
-![Weather Dashboard]()
+![Weather Dashboard](https://github.com/kstaver/Weather-Dashboard/blob/main/assets/images/weather-dashboard.JPG)
 
 ## License
 This project is covered under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
