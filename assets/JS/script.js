@@ -141,7 +141,7 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
-    var uvBadge = "";
+   // var uvBadge = "";
 
     if (uvIndex.value < 3 ) {
         uvBadge = "low"
@@ -151,8 +151,9 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
         uvBadge = "high"
     };
 
-    currentUvIEl.textContent = "UV Index: " + uvIndex
-    currentUvIEl.classList = "uvBadge";
+    uvIndex.style.backgroundColor = 'green';
+    currentUvIEl.textContent = "UV Index: " + uvIndex;
+   //currentUvIEl.classList = "uvBadge";
 
     $("#daily-forecast-container").remove(); 
     
