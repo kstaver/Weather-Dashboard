@@ -113,24 +113,27 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     let currentHumidityEl = document.createElement("p");
     let currentWinSpEl = document.createElement("p");
     let currentUvIEl = document.createElement("p");
+    let uvISpan = document.createElement("span");
+    let uvISpan2 = document.createElement("span");
     
     currentTempEl.textContent = "Temperature: " + (currentTempImperial.toFixed(1)) + " °F";
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWinSpEl.textContent = "Wind Speed: " + currentMPS + " MPH";
 
-    if(uvIndex < 3 ) {
-        currentUvIEl.className = "low";
-    }else if (uvIndex < 6 ) {
-        currentUvIEl.className = "medium";
-    }else if(uvIndex < 8){
-        currentUvIEl.className = "high";
-    }else if(uvIndex < 10){
-        currentUvIEl.className = "very-high";
-    }else{
-        currentUvIEl.className = "extremely-high";
-    }
+    uvISpan.textContent = "UV Index: ";
+    uvISpan2.textContent = uvIndex;
 
-    currentUvIEl.textContent = "UV Index: " + uvIndex;
+    if(uvIndex < 3 ){
+      uvISpan2.className = "low";
+    }else if (uvIndex < 6 ){
+      uvISpan2.className = "medium";
+    }else if(uvIndex < 8){
+      uvISpan2.className = "high";
+    }else if(uvIndex < 10){
+      uvISpan2.className = "very-high";
+    }else{
+      uvISpan2.className = "extremely-high";
+    }
 
     $("#daily-forecast-container").remove(); 
     
@@ -139,7 +142,9 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
     dailyForecastContainerEl.appendChild(currentTempEl);
     dailyForecastContainerEl.appendChild(currentHumidityEl);
     dailyForecastContainerEl.appendChild(currentWinSpEl);
-    dailyForecastContainerEl.appendChild(currentUvIEl);
+    dailyForecastContainerEl.appendChild(uvISpan);
+    dailyForecastContainerEl.appendChild(uvISpan2);
+
 };
 
 function populate5DayForecast(secondCallData) {
